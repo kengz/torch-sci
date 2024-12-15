@@ -1,5 +1,7 @@
 # torch-sci
 
+![Test](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
+
 Differentiable PyTorch functions to calculate scientific notation.
 
 ## Installation
