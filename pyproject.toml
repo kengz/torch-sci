@@ -1,0 +1,33 @@
+[project]
+name = "torch-sci"
+version = "0.1.0"
+description = "Differentiable scientific notation function for PyTorch."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+pytorch = [
+  "torch>=2.5.1",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu124", marker = "platform_system != 'Darwin'"},
+]
+
+[dependency-groups]
+dev = [
+    "autopep8>=2.3.1",
+    "flake8>=7.1.1",
+    "jupyter>=1.1.1",
+    "numpy>=2.2.0",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "torch>=2.5.1",
+]
