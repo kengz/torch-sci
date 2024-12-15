@@ -38,3 +38,7 @@ addopts = [
     "--cov-report=term",
 ]
 filterwarnings = "ignore"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
