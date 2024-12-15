@@ -2,7 +2,7 @@ name: release
 on:
   push:
     branches:
-      - main
+      - $default-branch
 permissions:
   contents: read # for checkout
 jobs:
@@ -17,7 +17,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          cache: npm
           node-version: lts/*
       - run: npx semantic-release
         env:
