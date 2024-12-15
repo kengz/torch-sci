@@ -1,7 +1,7 @@
 [project]
 name = "torch-sci"
 version = "0.1.0"
-description = "Differentiable scientific notation function for PyTorch."
+description = "Differentiable PyTorch functions to calculate scientific notation."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
@@ -31,3 +31,11 @@ dev = [
     "pytest-cov>=6.0.0",
     "torch>=2.5.1",
 ]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--cov=torch_sci",
+    "--cov-report=html",
+    "--cov-report=term",
+]
+filterwarnings = "ignore"
