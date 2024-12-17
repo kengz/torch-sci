@@ -54,7 +54,7 @@ torch_sci.to_sci(torch.tensor(1234.0, requires_grad=True))
 
 ```bash
 # setup virtualenv
-venv sync
+uv sync
 ```
 
 ### Unit Tests
